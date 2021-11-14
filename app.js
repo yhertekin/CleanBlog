@@ -8,7 +8,9 @@ const postController = require("./controllers/postController");
 const app = express();
 
 // connect db
-mongoose.connect("mongodb://localhost/cleanblog-test-db");
+mongoose.connect(
+	"mongodb+srv://yhertekin:QsBxsbbNQRFuWDDC@cluster0.mhpr5.mongodb.net/cleanblog?retryWrites=true&w=majority"
+);
 
 app.set("view engine", "ejs");
 
@@ -32,7 +34,7 @@ app.get("/about", pageController.getAboutPage);
 app.get("/add_post", pageController.getAddPage);
 app.get("/posts/edit/:id", pageController.getEditPage);
 
-const port = 8000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
 	console.log(`Server started at port: ${port}`);
 });

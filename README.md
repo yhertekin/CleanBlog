@@ -10,7 +10,7 @@ Create Read Update Delete Posts
 ## Install
 
     $ git clone https://github.com/yhertekin/CleanBlog
-    $ cd PCAT
+    $ cd CleanBlog
     $ yarn install
 
 ## Running the project

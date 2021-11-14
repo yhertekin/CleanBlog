@@ -8,9 +8,7 @@ const postController = require("./controllers/postController");
 const app = express();
 
 // connect db
-mongoose.connect(
-	"mongodb+srv://yhertekin:QsBxsbbNQRFuWDDC@cluster0.mhpr5.mongodb.net/cleanblog?retryWrites=true&w=majority"
-);
+mongoose.connect("add your own connection string");
 
 app.set("view engine", "ejs");
 
